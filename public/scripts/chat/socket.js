@@ -37,7 +37,7 @@ socket.on('receive',(msg) => {
     
 })
 function renderMessage(messagem){
-    let locky = messagem.author === camps.namePlayer.value
+    let locky = messagem.id === socket.id
     camps.miniChat.innerHTML = `<div class="campMessage"><p class="user-msg-mine">${messagem.hour}<strong class="name-user-chat-Mine"> ${locky? "Voce" : messagem.author}</strong>: ${messagem.message}</p></div>`
     $(camps.chat).append(`<div  class="${locky? "campMessage" : "campMessage2"}"><div class="${locky? "user-msg" : "user-msg-oponente"}"><span class="name-user-chat"><strong >${locky? "Voce" : messagem.author}</strong><p class="hour-chat">${messagem.hour}</p></span>${messagem.message}</div></div>`)
     camps.chat.scrollTop = camps.chat.scrollHeight;

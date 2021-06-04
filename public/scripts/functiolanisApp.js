@@ -26,7 +26,11 @@ function OFFfocusSection(item,control){
     }
     
 }
+const verificaEspaco = (string) => /\s/g.test(string);
 function alt(){
+    if(verificaEspaco(namePlayer.value)){
+        namePlayer.value.indexOf(" ") === 0 ? namePlayer.value = `User${Math.floor(Math.random() * 10000)}` : ""
+    }
     if(id.value !== ""){   
         document.getElementById('form-2').action = `/game/${id.value}`;
 

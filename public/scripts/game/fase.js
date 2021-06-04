@@ -95,25 +95,7 @@ function mostrarErro(jogadorDigta){
     
 }
 function VidaPlay(){
-    if(variaveisVilian.ataqueDoVilao == 0){
-        campsPlayer.vidaPlayer.setAttribute("src", "../../images/assets/vida6.png")
-    }
-    else if(variaveisVilian.ataqueDoVilao == 1){
-        campsPlayer.vidaPlayer.setAttribute("src", "../../images/assets/vida5.png")
-    }
-    else if(variaveisVilian.ataqueDoVilao == 2){
-        campsPlayer.vidaPlayer.setAttribute("src", "../../images/assets/vida4.png")
-    }
-    else if(variaveisVilian.ataqueDoVilao == 3){
-        campsPlayer.vidaPlayer.setAttribute("src", "../../images/assets/vida3.png")
-    }
-    else if(variaveisVilian.ataqueDoVilao == 4){
-        campsPlayer.vidaPlayer.setAttribute("src", "../../images/assets/vida2.png")
-    }
-    else if(variaveisVilian.ataqueDoVilao == 5){
-        campsPlayer.vidaPlayer.setAttribute("src", "../../images/assets/vida1.png")
-        
-    }
+    campsPlayer.vidaPlayer.setAttribute("src", imagesLife[variaveisVilian.ataqueDoVilao])
 }
 function AlerLifeProps(msg){
     let controlAlert = true

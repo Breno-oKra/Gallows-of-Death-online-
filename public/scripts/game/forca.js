@@ -36,7 +36,6 @@ function dividePalavra(input){
     for (let i = 0; i < input.length; i++) {
         if((input[i] !== " ") && (input[i] !== "-") && (input[i] !== "_") && (input[i] !== ".") && (input[i] !== "#") && (input[i] !== "$")){
             variaveis.palavra.push(input[i])
-            variaveis.palavraInteligente.push(input[i])
             var encapuslar = document.createElement("div")
             encapuslar.setAttribute("class","linhasBottom")
             var td = document.createElement("div")
