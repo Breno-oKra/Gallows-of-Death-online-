@@ -1,0 +1,93 @@
+button:hover{
+    opacity: 0.8;
+}
+.img-inithial{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 60%;
+    height: 80%;
+    min-height: 500px;
+    min-width: 500px;
+    background-image: url("../../assets/fundo.png");
+    background-size: 100% 100%;
+}
+.containerInfos{
+    position: absolute;
+    top: 40%;
+    left: 2%;
+}
+.infoRooms{
+    font-size: 22px;
+    color: red;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+}
+.qtdRooms{ 
+    font-size: 20px;
+    color: #fff;
+    background-color: greenyellow;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.title{
+    position: absolute;
+    top: 0;
+
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 2px 3px 3px #000;
+}
+#name-player{
+    width: 300px;
+    height: 60px;
+    border: 3px solid #000;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+#name-player:focus{
+    outline: 0;
+    box-shadow: 0 0 0 ;
+}
+.alignCamps{
+    display: flex;
+    flex-direction: row;
+}
+#codin{
+    display: none;
+    width: 300px;
+    height: 60px;
+    border: 3px solid #000;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+#codin:focus{
+    outline: 0;
+    box-shadow: 0 0 0 ;
+}
+#btnCode{
+    width: 300px;
+    height: 60px;
+    background-color:greenyellow;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+.btn-entry{
+    width: 90px;
+    height: 60px;
+    border: 1px solid gray;
+    border-radius: 20px;
+
+}

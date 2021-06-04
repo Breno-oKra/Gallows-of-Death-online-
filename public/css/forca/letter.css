@@ -1,0 +1,63 @@
+#tableWorlds{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.linhasBottom{
+    width: 6%;
+    height: 40%;
+    display:flex;
+    justify-content:center;
+    background-image: url("../../images/assets/chaoForca.png");
+    background-size: 100% 100%;
+    margin-right: 5px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+.linhasBottomSpace{
+    width: 6%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    font-size: 50px;
+}
+::-webkit-scrollbar {
+    width:5px;
+    height: 5px;
+    }
+     
+    /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+    ::-webkit-scrollbar-track {
+    background:#333;
+    }
+     
+    /* aqui é a alça da barra, que demonstra a altura que você está na página
+    estou colocando uma cor azul clara nela*/
+    ::-webkit-scrollbar-thumb {
+    background: #9e8911;
+    }
+#wrongletters{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y:hidden;
+    
+}
+.boxLetrasErradas{
+    min-width: 50px;
+    height: 90%;
+    display: flex;
+    background-color: lavender;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 25px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main/main.css">
+    <link rel="stylesheet" href="/css/login/login.css">
+</head>
+<body>
+    <header>
+        <h1>Forca Da Morte</h1>
+    </header>
+    <div class="containerInfos">
+        <p class="qtdRooms">Total de Salas <%= rooms %></p>
+        <p class="infoRooms"><%= err %> </p>
+    </div>
+    <main class="container">
+        <div class="img-inithial">
+            <h1 class="title">escolha um nome</h1>
+            <form id="form-2" action="/game/<%= coder %>" method="POST">
+                <div class="alignCamps">
+                    <input id="name-player"  name="name" placeholder="nome" required />
+                    <button class="btn-entry" onclick="alt()" type="submit">entrar</button>
+                </div>
+                
+                <input id="codin" name="code" placeholder="codigo da sala" />
+                <button id="btnCode" type="button" onclick="onCode()">Entrar com Codigo</button>
+            </form>
+        </div>
+        
+    </main>
+    <script src="/scripts/functiolanisApp.js"></script>
+</body>
+</html>
