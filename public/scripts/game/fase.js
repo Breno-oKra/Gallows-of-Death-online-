@@ -134,17 +134,20 @@ function propsRecoverLife(points,life){
        
     }
 }
-function recoverLife(item){    
-    if(item == 1){
-        propsRecoverLife(8,1)
-    }
-    if(item == 3){
-        propsRecoverLife(12,2)
-    }
-    if(item == 6){
-        propsRecoverLife(15,5)
-    }
-    
+function recoverLife(item){ 
+    switch (item) {
+        case 1:
+            propsRecoverLife(8,1)
+          break;
+        case 3:
+            propsRecoverLife(12,2)
+          break;
+        case 6:
+            propsRecoverLife(15,5)
+          break;
+        default:
+          break;
+    }      
 }
 
 function alterPlayer(item){

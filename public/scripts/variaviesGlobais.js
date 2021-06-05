@@ -19,7 +19,7 @@ const variaveis = {
 const variaveisVilian = {
     contadorDpontosVilao: 0,
     ataqueDoVilao :0,
-    ataquesNoVilão : 4
+    ataquesNoVilão : 0
 }
 const images = [
     "../../Vilao1/Animations/withPlayer1/morteThiagoOPokemon.gif",
