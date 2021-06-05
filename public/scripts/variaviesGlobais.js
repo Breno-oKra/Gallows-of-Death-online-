@@ -3,7 +3,6 @@ const variaveis = {
     palavra:[],
     // controla os digitos dos jogadores
     controleDeLetra : 0,
-    controleFecharPoderes : false,
     letrasDigitadas : [],
     controleLenghtPalavra : 0,
     controledePalavra : 0,
@@ -13,13 +12,14 @@ const variaveis = {
     inputPalavra :"",
     controlChat:false,
     time:60,
-    temp:""
+    temp:"",
+    controlTime:true
     
 }
 const variaveisVilian = {
     contadorDpontosVilao: 0,
     ataqueDoVilao :0,
-    ataquesNoVilão : 0
+    ataquesNoVilão : 4
 }
 const images = [
     "../../Vilao1/Animations/withPlayer1/morteThiagoOPokemon.gif",

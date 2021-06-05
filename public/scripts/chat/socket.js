@@ -63,7 +63,7 @@ socket.on("sorted",(item) => {
   
     setTimeout(() => {
         recuperaPalavra()
-    }, 3000);
+    }, 1000);
            
 })
 socket.on("letterPlay",(item) => {

@@ -1,3 +1,4 @@
+$("#modals").hide()
 let campes = camps.camp
 
 for (let i = 0; i < images.length; i++) {
@@ -7,7 +8,7 @@ for (let i = 0; i < images.length; i++) {
 setTimeout(() => {
     $(camps.controlPainelJogo).hide()
     $("#game").show()
-
+    
 },3000);
 
 function digitoJogador(){

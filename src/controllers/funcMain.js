@@ -9,9 +9,9 @@ module.exports = {
                 control = false
                 
                 if(finder === -1){
-                    controllersBD.getSockets.push({room:`${code}`,sockets:[{id:socket.id,name:names,socket:socket}]})
+                    controllersBD.getSockets.push({room:`${code}`,sockets:[{id:socket.id,name:names,socket:socket,online:true}]})
                 }else{
-                    controllersBD.getSockets[finder].sockets.push({id:socket.id,name:names,socket:socket})
+                    controllersBD.getSockets[finder].sockets.push({id:socket.id,name:names,socket:socket,online:true})
                 }
                 
                 func.totlaPlayer(code,socket,nsp)
@@ -41,8 +41,8 @@ module.exports = {
                 socket.on("pointer",(player,letter,controlLetter) => {
                     func.pointer(player,letter,controlLetter,code)
                 })
-                socket.on("requestpower",(player) => {
-                    func.requestpower(player,code)
+                socket.on("requestpower",(player,atakOnVillan,atakOfVillan) => {
+                    func.requestpower(player,code,atakOnVillan,atakOfVillan)
                 })
                 socket.on("outherWord",(dicas,word,socket) => {
                     func.outherWord(dicas,word,socket,code)
@@ -53,6 +53,12 @@ module.exports = {
                 })
                 socket.on("time",(time) => {
                     socket.emit("getTime",time)
+                })
+                socket.on("engGame",(item) => {
+                    func.endGame(item,code)
+                })
+                socket.on("reload",(item) => {
+                    func.reload(item,code,socket)
                 })
                 
             }

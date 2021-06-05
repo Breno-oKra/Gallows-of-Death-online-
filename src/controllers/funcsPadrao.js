@@ -3,8 +3,7 @@ module.exports = {
     locality:(allSockets,code) => {
         return allSockets.find((item) => item.room === `${code}`).sockets
     },
-    forWords:(socket,local) => {
-        
+    forWords:(socket,local) => {      
         var num = Math.floor(Math.random() * controllerBD.getLenghtWords )
         let num1 = Math.floor(Math.random() * controllerBD.getWords[num].palavras.length )
 

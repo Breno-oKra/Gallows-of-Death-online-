@@ -63,13 +63,14 @@ module.exports =  {
     
         } 
     },
-    requestpower:(player,code) => {
+    requestpower:(player,code,atakOnVillan) => {
         let sockets = controllersDB.getSockets
         let local = funcspadrao.locality(sockets,code)
         for (let i = 0; i < local.length; i++) {
             let finder = local[i].id === player
             let data = {
                 play:finder? "play1":"vilao",
+                ataks:atakOnVillan,
             }
             local[i].socket.emit("power",data)
     
@@ -88,7 +89,7 @@ module.exports =  {
             novoBanco.push(alterar[0])  
             controllersDB.getWords = novoBanco
         }
-        let sockets = controllerBD.getSockets
+        let sockets = controllersDB.getSockets
         var local = funcspadrao.locality(sockets,code)
 
         funcspadrao.forWords(socket,local)
@@ -108,6 +109,41 @@ module.exports =  {
     
         } 
     },
+    endGame:(player,code) => {
+        let sockets = controllersDB.getSockets
+        let local = funcspadrao.locality(sockets,code)
+
+        let position = local.findIndex((item) => item.id === player)
+        local[position].online = false
+
+    },
+    reload:(player,code,socket) => {
+        let sockets = controllersDB.getSockets
+        let local = funcspadrao.locality(sockets,code)
+
+        let position = local.findIndex((item) => item.id === player)
+        local[position].online = true
+        let finder = local.filter((item) => item.online === true)
+
+        var num = Math.floor(Math.random() * controllersDB.getLenghtWords )
+        let num1 = Math.floor(Math.random() * controllersDB.getWords[num].palavras.length )
+
+        if(finder.length === 2){
+            for (let i = 0; i < local.length; i++) {
+                let locke = local[i].id === player
+                let data =  {
+                    controlPlay: locke? "play1" : "vilao",
+                    dicas: controllersDB.getWords[num].dica,
+                    inputPalavra:controllersDB.getWords[num].palavras[num1].toUpperCase() 
+                }
+                local[i].socket.emit("newGame",data)
+        
+            }
+        }else{
+            socket.emit("reloadAguard","Aguardando Oponente")
+        }
+
+    }
     
     
 

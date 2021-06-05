@@ -20,6 +20,7 @@ const camps = {
     camPoDigitPlayer: document.getElementById("camPoDigitPlayer"),
     camp: document.getElementById("conteinerJogo"),
     modal: document.getElementById("modals"),
+    playWins:document.getElementById("playerWins"),
     windowInfos:document.getElementById("windowInfos"),
     battleBtn : document.getElementById("battleButton"),
     playerDigit : document.getElementById("jogadorDigta"),

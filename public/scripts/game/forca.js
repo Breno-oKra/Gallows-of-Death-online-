@@ -78,6 +78,7 @@ function mostrarLetra(item){
         socket.emit("letter","vilao",item,variaveis.controledePalavra)
         if((variaveis.controledePalavra + variaveis.controleLenghtPalavra) == variaveis.inputPalavra.length){
             trocaPlavra()
+
         }
         
     }
@@ -120,3 +121,37 @@ function rezetaCampos(){
 function trocaPlavra(){ 
     socket.emit("outherWord",variaveis.dicas,variaveis.inputPalavra,socket.id)   
 }
+function vencedor(item){
+    clearInterval(variaveis.temp)
+    window.setTimeout(function() {
+        camps.playWins.innerText = `${item} é o vencedor(a)`
+        $("#modals").show()
+    },500); //2500
+}
+function tentarNovamente(){
+    variaveisVilian.contadorDpontos = 0
+    variaveisVilian.ataquesNoVilão = 0
+    variaveisVilian.ataqueDoVilao = 0
+    variaveis.controleDeLetra = 0
+    socket.emit("reload",socket.id)    
+}
+socket.on("reloadAguard",(msg) => {
+    document.getElementById("playerWins").innerText = msg
+    document.getElementById("btnReload").style.display = "none"
+})
+socket.on("newGame",(item) => {
+    console.log(item)
+    camps.camp.setAttribute("style", `background-image: url(${images[5]});`);
+
+    $(camps.wrongletters).show()
+    $(camps.tableWorlds).show()
+    $(camps.tips).show()
+
+    variaveis.dicas = item.dicas
+    tips.innerText = item.dicas
+    variaveis.inputPalavra = item.inputPalavra
+    variaveis.controleDjogador = item.controlPlay
+
+    $("#modals").hide()
+    recuperaPalavra()
+})
