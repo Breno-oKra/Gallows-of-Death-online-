@@ -156,6 +156,7 @@ function alterPlayer(item){
     let lockye = item !== ""
     camps.turnPlayer.innerText = lockye? `Vez do ${item} ${variaveis.controleDeLetra} de 3 Sequencia` : `Sua Vez De Jogar ${variaveis.controleDeLetra} de 3 Sequencia`  
     lockye? $(camps.turnPlayer).css("background-color","#fff") : $(camps.turnPlayer).css("background-color","greenyellow")
+    camps.audioEfects.setAttribute("src","")
 }
 socket.on("getTime",(time) => {
     contTime(time)   

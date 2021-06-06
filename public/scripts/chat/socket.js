@@ -1,7 +1,6 @@
 $(camps.oponente).hide()
-
 function send(){
-    if(camps.msgChat.value !== " " || camps.msgChat.value !== undefined){
+    if(camps.msgChat.value !== ""){
         let data = new Date()
         var messageObject = {
             id:socket.id,
@@ -32,7 +31,6 @@ socket.on('receive',(msg) => {
         
         
     }   
-    
     renderMessage(msg)
     
 })

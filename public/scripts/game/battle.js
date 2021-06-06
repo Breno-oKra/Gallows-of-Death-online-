@@ -22,7 +22,6 @@ socket.on("power",(data) => {
 })
 function atakORdeath(item){
     if(item === 'play1'){
-        console.log("oiplay1")
             $(camps.wrongletters).hide()
             $(camps.tableWorlds).hide()
             $(camps.tips).hide()
@@ -66,7 +65,7 @@ function propsPowerPlayer(points,atak){
     }
 }
 function PowerPlayer(poder){
-    if(poder == 1){
+    if(poder == 1 && variaveis.controleDjogador === "play1"){
         propsPowerPlayer(8,1)
     }
 }

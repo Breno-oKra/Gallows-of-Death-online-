@@ -1,13 +1,11 @@
 const variaveis = {
     controleDjogador : "",
     palavra:[],
-    // controla os digitos dos jogadores
     controleDeLetra : 0,
     letrasDigitadas : [],
     controleLenghtPalavra : 0,
     controledePalavra : 0,
     contadorDpontos: 0,
-    // variavel onde será armazanada a palavra aleatoria
     dicas : "",
     inputPalavra :"",
     controlChat:false,

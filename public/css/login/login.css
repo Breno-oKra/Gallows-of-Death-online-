@@ -14,6 +14,8 @@ button:hover{
     min-width: 500px;
     background-image: url("../../assets/fundo.png");
     background-size: 100% 100%;
+    border: 2px solid #fff;
+    border-radius: 20px;
 }
 .containerInfos{
     position: absolute;

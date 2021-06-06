@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="/css/HomeSelect.css">
+    <link rel="stylesheet" href="/css/radio.css">
     <link rel="stylesheet" href="/css/main/main.css">
     <link rel="stylesheet" href="/css/main/sections.css">
     <link rel="stylesheet" href="/css/main/game.css">
@@ -19,16 +21,30 @@
 <body  onkeypress="return checkMyKey(event);">
     <header>
         <h1>Forca Da Morte</h1>
+        <div class="audioContainer2">
+            <button onclick="play('musicOn','audioGame')"><img id="musicOn" src="/assets/VolumeOff.png" alt=""></button>
+            <div class="alingAudio">
+                <p id="nameMusic"></p>
+            </div>         
+        </div>
     </header>
     <div id="boxMsgs">
         <p>New Mssagem</p>
     </div>
+    <!--musicas da radio 8bit-->
+    <audio id="audioGame">
+        <source src="../assets/retroBatle2.mp3" type="audio/mp3" />
+    </audio>
     <main class="container">
         <div class="control-section1">.</div>
+
+        <!--section do player-->
         <section id="sectionPlayer" onmouseover="focusSection('#sectionPlayer','.control-section1','left')" onmouseout="OFFfocusSection('#sectionPlayer','.control-section1')" >
             <div class="ctn-container" >
+                <!--warnPontos = ativada quando o player não tem pontos suficientes, ela retorna qualtos pontos falta-->
                 <p id="warnPontos"></p>
                 <input class="namesPlayer" id="namePlayer" value="<%= name %>" disabled />
+                <!--codigo da sala, recuperado para usar na criação do namespace-->
                 <input id="coder" value="<%= code %>" style="display: none;" />
                 <div class="vida">
                     <img class="imgVida"  id="imgsVidaPlay" src="/images/assets/vida6.png" alt="">
@@ -48,15 +64,12 @@
                         </div>
                 </div>
             </div>
-            
         </section>
+         <!-- fim da section do player-->
+
         <div id="controlPainelJogo"><p>carregando imagens do jogo...<br>aguarde</p></div>
         <div id="game">
             <!--box audios do game-->
-
-            <audio id="audioGame" loop=Infinite>
-                <source src="../assets/retroBatle2.mp3" type="audio/mp3" />
-            </audio>
             <audio id="audioEfects">
                 <source src="../assets/fogo.mp3"  type="audio/mp3" />
             </audio>
@@ -81,7 +94,6 @@
 
                 <div id="camPoDigitPlayer">
                     <div class="centralizar1">
-                        <span > <img onclick="play('music')" id="music" src="/assets/VolumeOn.png" alt="music off" ></span>
                         <input  id="jogadorDigta" maxlength="1" autocomplete="off" type="text" placeholder="digite aqui uma letra" aria-autocomplete="none" >
                         <span class="btnSubmit"  onclick="digitoJogador()"><img class="imgIcons" src="/images/assets/enviar.png" alt="enviar"></span >
                     </div>
@@ -148,6 +160,7 @@
 <script src="/scripts/functiolanisApp.js"></script>
 <script src="/scripts/camps.js"></script>
 <script src="/scripts/variaviesGlobais.js"></script>
+<script src="/scripts/radio/radio.js"></script>
 <script src="/scripts/alterator.js"></script>
 <script src="/scripts/time.js"></script>
 <script src="/scripts/game/forca.js"></script>

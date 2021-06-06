@@ -33,5 +33,6 @@ const camps = {
     msgChat:document.getElementById("msg-chat"),
     oponente:document.getElementById("oponente"),
     controlPainelJogo:document.getElementById("controlPainelJogo"),
-    campTime: document.getElementById("campTime")
+    campTime: document.getElementById("campTime"),
+    nameMusic:document.getElementById("nameMusic")
 }

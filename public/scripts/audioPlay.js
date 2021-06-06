@@ -1,9 +1,6 @@
-var controleDeAudio = true
-var audio = document.getElementById("audioGame")
-
-function play(campo){
-	
-	audio.play()
+var controleDeAudio = false
+function play(campo,campAudio){
+	var audio = document.getElementById(campAudio)
 	var ImgAudio = document.getElementById(campo)
 	let foto1 = "../assets/VolumeOn.png"
     let foto2 = "../assets/VolumeOff.png"

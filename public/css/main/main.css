@@ -15,8 +15,11 @@ body{
     width: 100%;
     height: 100vh;
     background-color: #353b48;
+    background: linear-gradient(#353b4863, #0c0c0e8f), url("https://i0.wp.com/cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif");
+    background-size: 100% 100%;  
 }
 body header{
+    position: relative;
     width: 100%;
     min-width: 900px;
     height: 80px;
@@ -25,6 +28,14 @@ body header{
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.8;
+}
+#inithialBody{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#353b4863, #363d4bd8), url("http://www.deusdogif.com.br/Img/2/45/1c48e7e09442d2d6b41d5b721e72bf23.gif");
+    background-size: 100% 100%;
+    overflow: hidden;
 }
 body header h1{
     font-size: 36px;
@@ -44,6 +55,7 @@ body header h1{
     font-size: 18px;
 
 }
+
 .container{
     position: relative;
     width: 100%;

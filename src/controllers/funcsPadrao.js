@@ -5,6 +5,7 @@ module.exports = {
     },
     forWords:(socket,local) => {      
         var num = Math.floor(Math.random() * controllerBD.getLenghtWords )
+        console.log(controllerBD.getWords[num].palavras)
         let num1 = Math.floor(Math.random() * controllerBD.getWords[num].palavras.length )
 
         for (let i = 0; i < local.length; i++) {
