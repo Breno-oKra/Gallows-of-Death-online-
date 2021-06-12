@@ -10,23 +10,7 @@ module.exports = {
         {id:3,dica:"PERGUNTA - o país mais perigoso do mundo",palavras:["CONGO"]
             
         },
-        {id:4,dica:"Personagens de Dragon Ball",palavras:["GOKU","VEGETA","KURILIN","MAJIN BUU","BILLS","MESTRE KAME","GOHAN","GOTEN","TRANKS","BULMA"]
-            
-        }   
-    ],
-    allSockets : []
-    /* bancoDePalavras : [
-    
-        {id:1,dica:"PERGUNTA - cobra mais venenosa do mundo",palavras:["COBRA DE BARRICA AMARELA"]
-            
-        },
-        {id:2,dica:"Personagens da Disney",palavras:["TIO PATINHAS","PATO DONALD","MINNIE MOUSE","PETER PAN","CAPITAO GANCHO","RAPUNZEL","CINDERELA","TIANA","ARIEL","POCAHONTAS","SIMBA","PUMBA","MUFASA","ALADDIN"]
-            
-        },
-        {id:3,dica:"PERGUNTA - o país mais perigoso do mundo",palavras:["CONGO"]
-            
-        },
-        {id:4,dica:"Personagens de Dragon Ball",palavras:["GOKU","VEGETA","KURILIN","MAJIN BUU","BILLS","MESTRE KAME","GOHAN","GOTEN","TRANKS","BULMA"]
+        {id:4,dica:"Personagens de Dragon Ball",palavras:["GOKU","VEGETA","KURIRIN","MAJIN BOO","BILLS","MESTRE KAME","GOHAN","GOTEN","TRUNKS","BULMA","ANDROID 18","ANDROID 17","FREEZA","BROLY","PICCOLO","CELL","NAPPA","MR SATAN","YAMCHA","SHENLONG","RADITZ","PAN","TENSHINHAN","CHAOS","MR POPO","OOB","KAMI SAMA","DODORIA","DABURA","PUAL","TAO PAI PAI"]
             
         },
         
@@ -62,9 +46,9 @@ module.exports = {
             
         },
         
-        {id:15,dica:"Personagens de Naruto",palavras:["NARUTO","SASUKE","TSUNADE","NAGATO","OBITO","KAKASHI","ITACHI","MINATO","HINATA","NEJI","SAKURA"]
+        {id:15,dica:"Personagens de Naruto",palavras:["NARUTO","SASUKE","TSUNADE","NAGATO","OBITO","KAKASHI","ITACHI","MINATO","HINATA","NEJI","SAKURA","MADARA","JIRAYA","GAARA","SHIKAMARU","DEIDARA","ASUMA","OROCHIMARU","SASORI","TENTEN","TEMARI","KONOHAMARU","KONAN","SAI","KUSHINA","KAKUZU","CHOJI","KABUTO YAKUSHI","KARIN","DANZOU SHIMURA","ROCK LEE","KILLER BEE","KONAN","KIBA INUZUKA","YAMATO","MIGHT GUY","KURENAI","KANKURO","KISAMI HOSHIGAKI"]
             
         },     
-    ],*/
-        
+    ],
+    allSockets : []    
 }
