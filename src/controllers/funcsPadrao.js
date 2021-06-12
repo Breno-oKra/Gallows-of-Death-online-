@@ -3,17 +3,18 @@ module.exports = {
     locality:(allSockets,code) => {
         return allSockets.find((item) => item.room === `${code}`).sockets
     },
-    forWords:(socket,local) => {      
-        var num = Math.floor(Math.random() * controllerBD.getLenghtWords )
-        console.log(controllerBD.getWords[num].palavras)
-        let num1 = Math.floor(Math.random() * controllerBD.getWords[num].palavras.length )
+    forWords:(socket,local,code) => {      
+        let words = controllerBD.getWordsRoom(code)
+
+        var num = Math.floor(Math.random() * words.length )
+        let num1 = Math.floor(Math.random() * words[num].palavras.length )
 
         for (let i = 0; i < local.length; i++) {
             let locke = local[i].id === socket
             let data =  {
                 controlPlay: locke? "play1" : "vilao",
-                dicas: controllerBD.getWords[num].dica,
-                inputPalavra:controllerBD.getWords[num].palavras[num1].toUpperCase() 
+                dicas: words[num].dica,
+                inputPalavra:words[num].palavras[num1].toUpperCase() 
             }
             local[i].socket.emit("sorted",data)
     

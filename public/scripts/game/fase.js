@@ -98,6 +98,9 @@ function mostrarErro(jogadorDigta){
 function VidaPlay(){
     campsPlayer.vidaPlayer.setAttribute("src", imagesLife[variaveisVilian.ataqueDoVilao])
 }
+function VidaVilan(){
+    campsVilian.vidaVilian.setAttribute("src", imagesLife[variaveisVilian.ataquesNoVilão])  
+}
 function AlerLifeProps(msg){
     let controlAlert = true
     let alertFullLife = window.setInterval(() => {
@@ -162,7 +165,6 @@ socket.on("getTime",(time) => {
     contTime(time)   
 })
 socket.on("trocPlayer",(data) => {
-    console.log(data)
     variaveis.controleDjogador = data.play
     alterPlayer(data.play === "play1"? "" : camps.nameOponenet.value)
 })

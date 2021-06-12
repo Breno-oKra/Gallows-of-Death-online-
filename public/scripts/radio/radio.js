@@ -15,7 +15,6 @@ $(camps.audioGame).bind('ended', function(){
 
 function nextMusics(music){
     let finder = musics.findIndex((item) => item.name === music)
-	console.log(finder)
 	var local = finder + 1
 	if(musics[local] === undefined){
 		local = 0

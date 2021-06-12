@@ -9,7 +9,7 @@ module.exports = {
                 control = false
                 
                 if(finder === -1){
-                    controllersBD.getSockets.push({room:`${code}`,sockets:[{id:socket.id,name:names,socket:socket,online:true}]})
+                    controllersBD.getSockets.push({room:`${code}`,sockets:[{id:socket.id,name:names,socket:socket,online:true}],words:controllersBD.getWords})
                 }else{
                     controllersBD.getSockets[finder].sockets.push({id:socket.id,name:names,socket:socket,online:true})
                 }

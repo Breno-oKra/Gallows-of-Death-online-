@@ -23,7 +23,7 @@ module.exports =  {
         let local = funcspadrao.locality(sockets,code)
         let lockey = socket === local[0].id
         if(!lockey){
-            funcspadrao.forWords(socket,local)
+            funcspadrao.forWords(socket,local,code)
         }
     },
     desconected:(code,socket,nsp) => {
@@ -77,23 +77,23 @@ module.exports =  {
         } 
     },
     outherWord:(dicas,word,socket,code) => {
-        var acharPalavra = controllersDB.getWords.filter(item => item.dica == dicas)
+        let sockets = controllersDB.getSockets
+        let words = controllersDB.getWordsRoom(code)
+        let acharPalavra = words.filter(item => item.dica == dicas)
         if(acharPalavra[0].palavras.length == 1){
-            let retirarObjeto = controllersDB.getWords.filter(item => item.dica != dicas)
-            controllersDB.getWords = retirarObjeto
+            let retirarObjeto = words.filter(item => item.dica != dicas)
+            controllersDB.setWords(code,retirarObjeto)
         }
         if(acharPalavra[0].palavras.length > 1){
-            var alterar = controllersDB.getWords.filter(item => item.dica == dicas)    
+            let alterar = controllersDB.getWords.filter(item => item.dica == dicas)    
             alterar[0].palavras.splice(alterar[0].palavras.indexOf(word), 1)   
-            var novoBanco = controllersDB.getWords.filter(item => item.dica != dicas)   
+            let novoBanco = controllersDB.getWords.filter(item => item.dica != dicas)   
             novoBanco.push(alterar[0])  
-            controllersDB.getWords = novoBanco
+            controllersDB.setWords(code,novoBanco)
         }
-        let sockets = controllersDB.getSockets
-        var local = funcspadrao.locality(sockets,code)
+        let local = funcspadrao.locality(sockets,code)
 
-        funcspadrao.forWords(socket,local)
-
+        funcspadrao.forWords(socket,local,code)
 
     },
     trocarPlayer:(player,code) => {
@@ -125,8 +125,10 @@ module.exports =  {
         local[position].online = true
         let finder = local.filter((item) => item.online === true)
 
-        var num = Math.floor(Math.random() * controllersDB.getLenghtWords )
-        let num1 = Math.floor(Math.random() * controllersDB.getWords[num].palavras.length )
+        let words = controllersDB.getWordsRoom(code)
+
+        var num = Math.floor(Math.random() * words )
+        let num1 = Math.floor(Math.random() * words[num].palavras.length )
 
         if(finder.length === 2){
             for (let i = 0; i < local.length; i++) {
@@ -134,7 +136,7 @@ module.exports =  {
                 let data =  {
                     controlPlay: locke? "play1" : "vilao",
                     dicas: controllersDB.getWords[num].dica,
-                    inputPalavra:controllersDB.getWords[num].palavras[num1].toUpperCase() 
+                    inputPalavra:words[num].palavras[num1].toUpperCase() 
                 }
                 local[i].socket.emit("newGame",data)
         

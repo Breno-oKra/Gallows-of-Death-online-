@@ -10,7 +10,6 @@ function contTime(time){
         
         if(((variaveis.time + 60 - 15) === times) && variaveis.controlTime === true){
             variaveis.controlTime = false
-            console.log("breno")
             $(camps.campTime).css("background-color","rgb(231, 69, 41)")
             camps.audioEfects.setAttribute("src","../../assets/timeEnd.mp3")
             camps.audioEfects.play();

@@ -38,7 +38,6 @@ function atakORdeath(item){
                 vencedor(camps.namePlayer.value)
             },3800); //2500
     }else{
-        console.log("oisefudeo")
         $(camps.wrongletters).hide()
         $(camps.tableWorlds).hide()
         $(camps.tips).hide()

@@ -140,7 +140,6 @@ socket.on("reloadAguard",(msg) => {
     document.getElementById("btnReload").style.display = "none"
 })
 socket.on("newGame",(item) => {
-    console.log(item)
     camps.camp.setAttribute("style", `background-image: url(${images[5]});`);
 
     $(camps.wrongletters).show()
